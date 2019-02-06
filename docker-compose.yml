@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web: # can call this whatever we want
+    build: # refers to the Dockerfile
+      context: . # location of dockerfile
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+    container_name: 'frontend'
+# tests:
+#   build: # refers to the Dockerfile
+#     context: . # location of dockerfile
+#     dockerfile: Dockerfile.dev
+#   volumes:
+#     - .:/app
+#   command: ["npm","run","test"]
