@@ -8,7 +8,8 @@
 # IMAGE_TAG
 
 version: 0.2
-
+#runtime-versions:
+  #docker: 18
 phases:
   pre_build:
     commands:
@@ -18,8 +19,6 @@ phases:
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_URI="$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG"
   build:
-    runtime-versions:
-      docker: 18
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
