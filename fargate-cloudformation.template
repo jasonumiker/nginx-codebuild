@@ -206,7 +206,7 @@
             "Type": "AWS::EC2::RouteTable"
         },
         "Service": {
-            "DependsOn": "ALB",
+            "DependsOn": "ALBListener",
             "Properties": {
                 "Cluster": {
                     "Ref": "ECSCluster"

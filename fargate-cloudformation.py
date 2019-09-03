@@ -201,7 +201,7 @@ TaskDefinition = t.add_resource(ecs.TaskDefinition(
 
 Service = t.add_resource(ecs.Service(
     "Service",
-    DependsOn=ALB,
+    DependsOn=ALBListener,
     Cluster=Ref(ECSCluster),
     DesiredCount=1,
     TaskDefinition=Ref(TaskDefinition),
