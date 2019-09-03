@@ -53,7 +53,7 @@
                             "Value": "latest"
                         }
                     ],
-                    "Image": "aws/codebuild/docker:17.09.0",
+                    "Image": "aws/codebuild/amazonlinux2-x86_64-standard:1.0",
                     "PrivilegedMode": "true",
                     "Type": "LINUX_CONTAINER"
                 },
